@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CORA — Профессиональная защита древесины</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav id="nav" class="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero" onclick="showMain()">
+      <svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 3v24"/>
+        <path d="M15 8 L8 15 L15 15"/>
+        <path d="M15 14 L22 21 L15 21"/>
+      </svg>
+      CORA
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero" onclick="showMain()">Главная</a></li>
+      <li><a href="#tovary">Товары</a></li>
+      <li><a href="#about">О компании</a></li>
+      <li><a href="#contact" class="nc">Связаться для покупки</a></li>
+    </ul>
+    <button class="hamburger" id="ham" onclick="toggleMob()" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mob-menu" id="mob">
+  <a href="#hero"    onclick="showMain();closeMob()">Главная</a>
+  <a href="#tovary"  onclick="closeMob()">Товары</a>
+  <a href="#about"   onclick="closeMob()">О компании</a>
+  <a href="#contact" onclick="closeMob()">Связаться для покупки</a>
+</div>
+
+<!-- ===================== MAIN PAGE ===================== -->
+<div id="main-page">
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-img" id="hero-img"></div>
+    <div class="hero-ov"></div>
+    <div class="hero-wood-strip"></div>
+    <div class="hero-c">
+      <div class="hero-pill">Профессиональная защита древесины</div>
+      <h1>Защита дерева<br>на <em>50 лет</em></h1>
+      <p>Антисептики глубокого проникновения — проверены строителями и архитекторами по всей России.</p>
+      <div class="hero-acts">
+        <a href="#tovary" class="btn btn-green">Смотреть товары</a>
+        <a href="#contact" class="btn btn-ghost">Связаться с нами</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>прокрутите</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14m-7-7 7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <div class="wood-rule"></div>
+
+  <!-- PRODUCTS -->
+  <section id="tovary" class="wg">
+    <div class="wrap" style="padding-top:7rem;padding-bottom:7rem;">
+      <div class="sh fi">
+        <span class="ey">Наша продукция</span>
+        <h2>Антисептики для&nbsp;древесины</h2>
+        <p>Два профессиональных состава для различных задач — от бани и внутренних работ до полувековой защиты в самых сложных условиях.</p>
+      </div>
+      <div class="prod-grid">
+
+        <!-- Card 1 — сложные условия (green) -->
+        <div class="pcard fi fi-d1">
+          <div class="pimg">
+            <img class="main-photo" src="images/product-banya.jpg" alt="CORA Антисептик EXPERT/CCA — для наружных работ и сложных условий">
+            <img class="pimg-gost" src="images/gost.png" alt="ГОСТ">
+            <div class="pimg-years">до 50 лет</div>
+          </div>
+          <div class="pbody">
+            <div class="ptag">Для сложных условий · Наружные работы</div>
+            <h3>CORA для защиты в сложных условиях</h3>
+            <p class="pdesc">Профессиональные антисептики для древесины, предназначенной для эксплуатации в агрессивных условиях: настилы по грунту, причалы, погреба, теплицы, столбы, ограды, нижние венцы и другие конструкции в тяжёлых влажных условиях.</p>
+            <div class="pbadges">
+              <div class="pbadge">Срок защиты до 50 лет</div>
+              <div class="pbadge">Биозащита невымываемая</div>
+              <div class="pbadge">Против грибов, плесени и насекомых</div>
+              <div class="pbadge">Экологичен — без ограничений по контакту</div>
+              <div class="pbadge">Антисептик CORA ССА включён в ГОСТ</div>
+            </div>
+            <button class="btn btn-dark pbtn" style="width:100%;justify-content:center;" onclick="showDetail(2)">
+              Подробнее
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 — баня и внутри (blue) -->
+        <div class="pcard t-blue fi fi-d2">
+          <div class="pimg">
+            <img class="main-photo" src="images/product-slozhnye.jpg" alt="CORA Антисептик ECO-BIO — для бани и внутренних работ">
+            <img class="pimg-gost" src="images/gost.png" alt="ГОСТ">
+            <div class="pimg-years">до 35 лет</div>
+          </div>
+          <div class="pbody">
+            <div class="ptag">Эко · Для бани и внутренних работ</div>
+            <h3>CORA Эко для бани и внутренних работ</h3>
+            <p class="pdesc">Защита деревянных конструкций от гниения, плесени, «синевы», насекомых-древоточцев в условиях конденсационного и гигроскопического увлажнения. Может применяться как грунтовка перед покрытием лакокрасочными материалами.</p>
+            <div class="pbadges">
+              <div class="pbadge">Срок защиты до 35 лет</div>
+              <div class="pbadge">Экобиозащита для бани</div>
+              <div class="pbadge">Невымываемый</div>
+              <div class="pbadge">Бесцветный</div>
+              <div class="pbadge">Грунт под любые ЛКМ</div>
+            </div>
+            <button class="btn btn-dark pbtn" style="width:100%;justify-content:center;" onclick="showDetail(1)">
+              Подробнее
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="wood-rule"></div>
+
+  <!-- ADVANTAGES -->
+  <section id="advantages" class="wg-green">
+    <div class="wrap" style="padding-top:7rem;padding-bottom:7rem;">
+      <div class="sh fi">
+        <span class="ey" style="color:var(--wood-light)">Почему CORA</span>
+        <h2 style="color:#fff">Наши преимущества</h2>
+        <p style="color:rgba(240,245,234,.6)">Многолетний опыт разработки составов для защиты дерева, подтверждённый испытаниями и реальными объектами.</p>
+      </div>
+      <div class="adv-grid">
+        <div class="acard fi fi-d1">
+          <div class="aicon">
+            <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M17 3C17 3 5 8 5 18c0 8 12 13 12 13s12-5 12-13C29 8 17 3 17 3z"/>
+              <path d="M12 17l3.5 3.5L22 13"/>
+            </svg>
+          </div>
+          <h3>До 50 лет защиты</h3>
+          <p>Подтверждено независимыми испытаниями и объектами, возведёнными более десяти лет назад.</p>
+        </div>
+        <div class="acard fi fi-d2">
+          <div class="aicon">
+            <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M7 17h20M7 11h8M7 23h12"/>
+              <rect x="3" y="5" width="28" height="24" rx="2"/>
+              <circle cx="26" cy="11" r="3"/>
+            </svg>
+          </div>
+          <h3>Готовые составы и концентраты</h3>
+          <p>В наличии как готовые к применению составы, так и концентраты для самостоятельного разведения под задачу.</p>
+        </div>
+        <div class="acard fi fi-d3">
+          <div class="aicon">
+            <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M17 4l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/>
+              <path d="M10 26c0 3 3.6 5 7 5s7-2 7-5"/>
+            </svg>
+          </div>
+          <h3>Высокое качество составов</h3>
+          <p>Каждая партия проходит входной и выходной контроль. Формулы разработаны под климатические условия России.</p>
+        </div>
+        <div class="acard fi fi-d4">
+          <div class="aicon">
+            <svg viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <rect x="6" y="10" width="22" height="16" rx="2"/>
+              <path d="M12 10V7a5 5 0 0 1 10 0v3"/>
+              <circle cx="17" cy="18" r="2"/>
+              <path d="M17 20v3"/>
+            </svg>
+          </div>
+          <h3>Сертифицировано</h3>
+          <p>Продукция сертифицирована по ГОСТ, прошла санитарно-гигиеническую экспертизу и пожарную сертификацию.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wood-rule"></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="wg-pale">
+    <div class="wrap" style="padding-top:7rem;padding-bottom:7rem;">
+      <div class="about-txt fi">
+        <div class="sh" style="text-align:left;margin-bottom:2.5rem;">
+          <span class="ey">О компании</span>
+          <h2 style="color:var(--wood-dark)">Мы разрабатываем составы,<br>которые работают<br><em>десятилетиями</em></h2>
+        </div>
+        <p>Научно-производственное предприятие «ХимПродукт» - динамично развивающаяся компания в сфере производства  и продвижения на российском рынке материалов химической и лесохимической отраслях.</p>
+        <p>Одно из совместных  направлений – производство защитных составов для дерева. Вся продукция разработана совместно с ведущей в стране Сенежской научно-производственной лабораторией защиты древесины.</p>
+        <div class="wood-feature">
+          <p>«Антисептики и антипирены «CORA» отвечают самым высоким требованиям безопасности и не уступают по качеству импортным и отечественным аналогам. »</p>
+          <span class="wf-attr">— Команда ХимПродукт</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wood-rule"></div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="wg-green">
+    <div class="wrap" style="padding-top:7rem;padding-bottom:7rem;">
+      <div class="contact-inner">
+        <div class="contact-info fi">
+          <span class="ey" style="color:var(--wood-light);opacity:.75">Сотрудничество</span>
+          <h2>Связаться<br>для покупки</h2>
+          <p>Отправьте заявку или позвоните — наш менеджер ответит в течение одного рабочего дня и поможет подобрать нужный состав.</p>
+          <div class="clist">
+            <div class="ci">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2.09 4.19 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="ci-text">
+                <div class="lab">Телефон</div>
+                <div class="val">8 (343) 363-08-88</div>
+              </div>
+            </div>
+            <div class="ci">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="ci-text">
+                <div class="lab">Email</div>
+                <div class="val">info@cora.su</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cform fi fi-d2">
+          <h3>Оставить заявку</h3>
+          <form id="contact-form" onsubmit="submitForm(event)">
+            <div class="fg">
+              <label>Ваше имя</label>
+              <input type="text" placeholder="Иван Иванов" required>
+            </div>
+            <div class="fg">
+              <label>Телефон</label>
+              <input type="tel" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;padding:14px;margin-top:.4rem;">
+              Отправить заявку
+            </button>
+          </form>
+          <div class="form-ok" id="form-ok">
+            <div class="form-ok-ico">✓</div>
+            <p style="color:rgba(255,255,255,.75);font-size:1.05rem;">Заявка принята! Мы свяжемся с вами в течение рабочего дня.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /main-page -->
+
+<!-- ===================== PRODUCT DETAIL 1 — БАНЯ И ВНУТРИ (синяя) ===================== -->
+<div id="pd-1" class="pd-page">
+  <div class="pd-back-bar">
+    <div class="wrap">
+      <button class="pd-back" onclick="showMain()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg>
+        Назад к товарам
+      </button>
+    </div>
+  </div>
+  <div class="pd-hero-2">
+    <div class="wrap">
+      <div class="pd-hero-inner">
+        <div>
+          <div class="pd-hero-sub">CORA ECO-BIO · Для бани и внутренних работ</div>
+          <h1>Антисептик Эко<br>для бани</h1>
+          <p>Защита деревянных конструкций от гниения, плесени, «синевы», насекомых-древоточцев в условиях конденсационного и гигроскопического увлажнения.</p>
+        </div>
+        <div class="order-widget">
+          <div class="ow-title">Заказ и контакты</div>
+          <div class="ow-row">
+            <div class="ow-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2.09 4.19 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="ow-row-text"><div class="ow-lab">Телефон</div><div class="ow-val">8 (343) 363-08-88</div></div>
+          </div>
+          <div class="ow-row">
+            <div class="ow-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="ow-row-text"><div class="ow-lab">Email</div><div class="ow-val">info@cora.su</div></div>
+          </div>
+          <hr class="ow-divider">
+          <div class="ow-sizes-label">Готовый состав</div>
+          <div class="ow-sizes">
+            <div class="ow-size">5 л</div><div class="ow-size">10 л</div><div class="ow-size">50 л</div>
+          </div>
+          <div class="ow-sizes-label">Концентрат 1:9</div>
+          <div class="ow-sizes">
+            <div class="ow-size">1 л</div><div class="ow-size">5 л</div>
+          </div>
+          <button onclick="showMain();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),50)" class="btn btn-green" style="width:100%;justify-content:center;margin-top:.6rem;">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pd-body wg">
+    <div class="wrap">
+      <div class="pd-warning">
+        <div style="font-size:1.2rem;">⚠️</div>
+        <p><strong>ВНИМАНИЕ!</strong> На сайте представлен не полный ассортимент. Уточняйте наличие интересующего вас товара по телефону или оставив заявку на сайте.</p>
+      </div>
+      <div class="pd-cols">
+        <div>
+          <h3 style="color:var(--wood-dark);margin-bottom:1.5rem;">Основные параметры</h3>
+          <table class="params-tbl">
+            <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+            <tbody>
+              <tr><td class="param-name">Назначение</td><td class="param-val">Экобиозащита для бани и внутренних работ</td></tr>
+              <tr><td class="param-name">Форма</td><td class="param-val">Концентрат, готовый раствор</td></tr>
+              <tr><td class="param-name">Цвет</td><td class="param-val">Бесцветный</td></tr>
+              <tr><td class="param-name">Вымываемость</td><td class="param-val">Невымываемый</td></tr>
+              <tr><td class="param-name">Срок защиты</td><td class="param-val">До 35 лет</td></tr>
+              <tr><td class="param-name">Расход (струганная)</td><td class="param-val">150–200 г/м²</td></tr>
+              <tr><td class="param-name">Расход (пиленая)</td><td class="param-val">250–350 г/м²</td></tr>
+              <tr><td class="param-name">Разбавление концентрата</td><td class="param-val">1:9 (вода)</td></tr>
+              <tr><td class="param-name">Срок годности</td><td class="param-val">Не ограничен</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pd-gallery">
+    <div class="wrap">
+      <h3>Фотогалерея</h3>
+      <div class="gal-grid">
+        <div class="gal-item">
+          <div class="gal-img">
+            <img class="gal-main" src="images/product-slozhnye.jpg" alt="Антисептик CORA ECO-BIO для бани">
+            <img class="gal-gost" src="images/gost.png" alt="ГОСТ">
+          </div>
+          <div class="gal-cap"><div class="gc-name">Антисептик CORA ECO-BIO для бани</div><div class="gc-vol">5 литров</div></div>
+        </div>
+        <div class="gal-item">
+          <div class="gal-img">
+            <img class="gal-main" src="images/product-slozhnye2.jpg" alt="Антисептик CORA ECO-BIO для бани">
+            <img class="gal-gost" src="images/gost.png" alt="ГОСТ">
+          </div>
+          <div class="gal-cap"><div class="gc-name">Антисептик CORA ECO-BIO для бани</div><div class="gc-vol">10 литров</div></div>
+        </div>
+        <div class="gal-item">
+          <div class="gal-ph">
+            <svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="5" y="9" width="28" height="22" rx="2"/><circle cx="19" cy="20" r="6"/><path d="M14 9l2-4h6l2 4"/></svg>
+            <div class="ph-lbl">фото продукта</div>
+          </div>
+          <div class="gal-cap"><div class="gc-name">Антисептик CORA ECO-BIO для бани</div><div class="gc-vol">50 литров</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pd-descs">
+    <div class="wrap">
+      <div class="dblock">
+        <h4>Назначение</h4>
+        <p>Для защиты деревянных конструкций от гниения, плесени, «синевы», насекомых-древоточцев в условиях конденсационного и гигроскопического увлажнения без контакта с грунтом и атмосферными осадками — внутри помещений и под навесом.</p>
+        <p>Может применяться в качестве грунтового слоя перед покрытием лакокрасочными материалами. Допускается применять средство для обработки древесины наружной эксплуатации при условии её дальнейшего покрытия влагостойкими лакокрасочными материалами.</p>
+      </div>
+      <div class="dblock">
+        <h4>Применение</h4>
+        <p>Для получения раствора, аналогичного готовому составу, жидкий концентрат разбавить любой пресной водой в пропорции 1:9 (1 кг концентрата + 9 л воды) и тщательно перемешать.</p>
+        <p>Древесину, очищенную от грязи, коры, луба, покрытий, обрабатывать кистью, валиком, распылением, вымачиванием или другими способами по ГОСТ 20022.6.</p>
+        <p>Обработку проводить при положительной температуре. Не обрабатывать мёрзлую древесину. Перед применением состав перемешать. Средство наносить в 2–3 приёма с интервалом 20–40 минут.</p>
+      </div>
+      <div class="dblock">
+        <h4>Расход</h4>
+        <p>Расход не менее 150–200 г/м² для струганной древесины и 250–350 г/м² для пиленой древесины.</p>
+      </div>
+      <div class="dblock">
+        <h4>Меры безопасности</h4>
+        <p>Работать в защитных очках, перчатках. Избегать попадания внутрь и на открытые кожные покровы. При попадании в глаза и рот промыть водой. При обработке методом распыления использовать респиратор.</p>
+      </div>
+      <div class="dblock">
+        <h4>Условия хранения и срок годности</h4>
+        <p>Хранить в герметично закрытой таре изготовителя отдельно от пищевых продуктов. После размораживания и перемешивания свойства восстанавливаются. Допускается выпадение незначительного осадка. Срок годности не ограничен.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PRODUCT DETAIL 2 — СЛОЖНЫЕ УСЛОВИЯ (зелёная) ===================== -->
+<div id="pd-2" class="pd-page">
+  <div class="pd-back-bar">
+    <div class="wrap">
+      <button class="pd-back" onclick="showMain()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m15 18-6-6 6-6"/></svg>
+        Назад к товарам
+      </button>
+    </div>
+  </div>
+  <div class="pd-hero-1">
+    <div class="wrap">
+      <div class="pd-hero-inner">
+        <div>
+          <div class="pd-hero-sub">CORA EXPERT / CCA · Для наружных работ</div>
+          <h1>Профессиональные<br>антисептики для<br>наружных работ</h1>
+          <p>Для обработки древесины, предназначенной для эксплуатации в агрессивных условиях. Жилищное, промышленное, садовое и ландшафтное назначение.</p>
+        </div>
+        <div class="order-widget">
+          <div class="ow-title">Заказ и контакты</div>
+          <div class="ow-row">
+            <div class="ow-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2.09 4.19 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="ow-row-text"><div class="ow-lab">Телефон</div><div class="ow-val">8 (343) 363-08-88</div></div>
+          </div>
+          <div class="ow-row">
+            <div class="ow-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="ow-row-text"><div class="ow-lab">Email</div><div class="ow-val">info@cora.su</div></div>
+          </div>
+          <hr class="ow-divider">
+          <div class="ow-sizes-label">Готовый состав</div>
+          <div class="ow-sizes">
+            <div class="ow-size">5 л</div><div class="ow-size">10 л</div><div class="ow-size">50 л</div>
+          </div>
+          <div class="ow-sizes-label">Концентрат 1:9</div>
+          <div class="ow-sizes">
+            <div class="ow-size">1 л</div><div class="ow-size">5 л</div>
+          </div>
+          <button onclick="showMain();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),50)" class="btn btn-green" style="width:100%;justify-content:center;margin-top:.6rem;">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pd-body wg">
+    <div class="wrap">
+      <div class="pd-warning">
+        <div style="font-size:1.2rem;">⚠️</div>
+        <p><strong>ВНИМАНИЕ!</strong> На сайте представлен не полный ассортимент. Уточняйте наличие интересующего вас товара по телефону или оставив заявку на сайте.</p>
+      </div>
+      <div class="pd-cols">
+        <div>
+          <h3 style="color:var(--wood-dark);margin-bottom:1.5rem;">Основные параметры</h3>
+          <table class="params-tbl">
+            <thead><tr><th>Параметр</th><th>Значение</th></tr></thead>
+            <tbody>
+              <tr><td class="param-name">Назначение</td><td class="param-val">Биозащита невымываемая, наружные работы</td></tr>
+              <tr><td class="param-name">Форма</td><td class="param-val">Концентрат, готовый раствор</td></tr>
+              <tr><td class="param-name">Цвет</td><td class="param-val">Зеленоватый</td></tr>
+              <tr><td class="param-name">Срок защиты</td><td class="param-val">До 50 лет</td></tr>
+              <tr><td class="param-name">Виды</td><td class="param-val">ССА (с мышьяком и хромом) и без мышьяка и хрома</td></tr>
+              <tr><td class="param-name">Расход (струганная)</td><td class="param-val">150–200 г/м²</td></tr>
+              <tr><td class="param-name">Расход (пиленая)</td><td class="param-val">250–350 г/м²</td></tr>
+              <tr><td class="param-name">Разбавление концентрата</td><td class="param-val">1:9 (вода)</td></tr>
+              <tr><td class="param-name">ГОСТ</td><td class="param-val">Антисептик CORA ССА включён в ГОСТ</td></tr>
+              <tr><td class="param-name">Срок годности</td><td class="param-val">Не ограничен</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pd-gallery">
+    <div class="wrap">
+      <h3>Фотогалерея</h3>
+      <div class="gal-grid">
+        <div class="gal-item">
+          <div class="gal-img">
+            <img class="gal-main" src="images/product-banya.jpg" alt="Антисептик CORA EXPERT для наружных работ">
+            <img class="gal-gost" src="images/gost.png" alt="ГОСТ">
+          </div>
+          <div class="gal-cap"><div class="gc-name">Антисептик CORA EXPERT для наружных работ</div><div class="gc-vol">5 литров</div></div>
+        </div>
+        <div class="gal-item">
+          <div class="gal-img">
+            <img class="gal-main" src="images/product-banya2.jpg" alt="Антисептик CORA CCA для наружных работ">
+            <img class="gal-gost" src="images/gost.png" alt="ГОСТ">
+          </div>
+          <div class="gal-cap"><div class="gc-name">Антисептик CORA CCA для наружных и внутренних работ</div><div class="gc-vol">5 литров</div></div>
+        </div>
+        <div class="gal-item">
+          <div class="gal-ph">
+            <svg viewBox="0 0 38 38" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="5" y="9" width="28" height="22" rx="2"/><circle cx="19" cy="20" r="6"/><path d="M14 9l2-4h6l2 4"/></svg>
+            <div class="ph-lbl">фото продукта</div>
+          </div>
+          <div class="gal-cap"><div class="gc-name">Антисептик CORA EXPERT для наружных работ</div><div class="gc-vol">1 литр</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pd-descs">
+    <div class="wrap">
+      <div class="dblock">
+        <h4>Назначение</h4>
+        <p>Для обработки древесины, предназначенной для эксплуатации в агрессивных условиях. Для жилищного, промышленного, садового и ландшафтного назначения: настилов по грунту, причалов, погребов, теплиц, бань, столбов, оград, садовой мебели, загонов для скота, лаг, нижних венцов, и других деревянных конструкций, контактирующих с человеком или домашними животными, в тяжёлых (влажных) условиях эксплуатации, которым предъявляются повышенные требования к экологичности и устойчивости к активному биоразрушению.</p>
+        <p>Для профессиональной и долговременной защиты древесины от гниения, плесневых и окрашивающих грибов, насекомых-древоточцев, в том числе в качестве грунтового слоя перед покрытием ЛКМ, в условиях особо интенсивного и продолжительного увлажнения, в длительном контакте с грунтом и водой, при эксплуатации в контакте с растениями, человеком, домашними животными.</p>
+        <p>Для обработки настилов по грунту, причалов, погребов, теплиц, бань, столбов, оград, садовой мебели, загонов для скота, лаг, нижних венцов и других деревянных конструкций.</p>
+      </div>
+      <div class="dblock">
+        <h4>Применение</h4>
+        <p>Для получения раствора, аналогичного готовому составу, жидкий концентрат разбавить любой пресной водой в пропорции 1:9 (1 кг концентрата + 9 л воды) и тщательно перемешать.</p>
+        <p>Древесину, очищенную от грязи, коры, луба, покрытий, обрабатывать кистью, валиком, распылением, вымачиванием или другими способами по ГОСТ 20022.6.</p>
+        <p>Обработку проводить при положительной температуре. Не обрабатывать мёрзлую древесину. Перед применением состав перемешать. Средство наносить в 2–3 приёма с интервалом 20–40 минут.</p>
+      </div>
+      <div class="dblock">
+        <h4>Расход</h4>
+        <p>Расход не менее 150–200 г/м² для струганной древесины и 250–350 г/м² для пиленой древесины.</p>
+      </div>
+      <div class="dblock">
+        <h4>Меры безопасности</h4>
+        <p>Работать в защитных очках, перчатках. Избегать попадания внутрь и на открытые кожные покровы. При попадании в глаза и рот промыть водой. При обработке методом распыления использовать респиратор.</p>
+      </div>
+      <div class="dblock">
+        <h4>Условия хранения и срок годности</h4>
+        <p>Хранить в герметично закрытой таре изготовителя отдельно от пищевых продуктов. После размораживания и перемешивания свойства восстанавливаются. Допускается выпадение незначительного осадка. Срок годности не ограничен.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <div class="nav-logo">
+          <svg viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:24px;height:24px;color:var(--wood-light)">
+            <path d="M15 3v24"/><path d="M15 8 L8 15 L15 15"/><path d="M15 14 L22 21 L15 21"/>
+          </svg>
+          CORA
+        </div>
+        <p>Профессиональная защита древесины — от бани до промышленных объектов.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Навигация</h5>
+        <a href="#hero" onclick="showMain()">Главная</a>
+        <a href="#tovary">Товары</a>
+        <a href="#about">О компании</a>
+        <a href="#contact">Контакты</a>
+      </div>
+      <div class="foot-col">
+        <h5>Контакты</h5>
+        <a href="tel:+73433630888">8 (343) 363-08-88</a>
+        <a href="mailto:info@cora.su">info@cora.su</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
